@@ -17,7 +17,7 @@ body:
     id: nom_piece
     attributes:
       label: Nom / référence de la pièce
-      description: Exemples : "Poignée lave-linge X", "Pièce aspirateur Y", etc.
+      description: 'Exemples : Poignee lave-linge X, Piece aspirateur Y, etc.'
       placeholder: "Nom ou référence de la pièce"
     validations:
       required: true
@@ -26,7 +26,7 @@ body:
     id: description
     attributes:
       label: Description détaillée
-      description: Dimensions approximatives, rôle de la pièce, emplacement, etc.
+      description: 'Dimensions approximatives, rôle de la pièce, emplacement, etc.'
       placeholder: "Décrivez la pièce et son utilisation..."
     validations:
       required: true
@@ -35,7 +35,7 @@ body:
     id: photos
     attributes:
       label: Photos / liens
-      description: Ajoutez des photos ou liens vers des images de la pièce.
+      description: 'Ajoutez des photos ou liens vers des images de la pièce.'
       placeholder: "Coller ici des liens ou joindre des images."
     validations:
       required: true
