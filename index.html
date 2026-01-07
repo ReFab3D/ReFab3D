@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html><head><title>Refab 3D Pièces</title></head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refab 3D - Pièces Discontinuées</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 3rem; }
+        h1 { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #1a1a1a; }
+        p { text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #666; }
+        .btn { display: inline-block; background: #007bff; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; border: none; cursor: pointer; margin: 0 auto 3rem; display: block; max-width: 300px; }
+        .btn:hover { background: #0056b3; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,123,255,0.4); }
+        table { width: 100%; border-collapse: collapse; margin-top: 3rem; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; color: #333; }
+        tr:hover { background: #f8f9fa; }
+        .status { padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+        .status-dispo { background: #d4edda; color: #155724; }
+        .status-test { background: #fff3cd; color: #856404; }
+        .status-indispo { background: #f8d7da; color: #721c24; }
+        @media (max-width: 768px) { body { padding: 1rem; } .container { padding: 2rem 1rem; margin: 0 1rem; } h1 { font-size: 2rem; } table { font-size: 0.9rem; } th, td { padding: 0.8rem 0.5rem; } }
+    </style>
+</head>
 <body>
-<h1>Pièces 3D discontinuées</h1>
-<p>Bienvenue ! Demandez fabrication d'une pièce introuvable.</p>
-<a href="https://github.com/tonusername/refab-3d-pieces/issues/new?assignees=&labels=demande&template=fabrication_piece.yaml&title=Demande+fabrication+%5BNom+pi%C3%A8ce%5D">
-<button>Créer demande</button></a>
-<!-- Tableau pièces disponibles -->
-<table>
-<tr><th>Pièce</th><th>Statut</th><th>Lien</th></tr>
-<!-- Ajoute lignes dynamiquement ou statique -->
-</table>
-</body></html>
+    <div class="container">
+        <h1>🔧 Refab 3D - Pièces Discontinuées</h1>
+        <p>Partagez des modèles de pièces introuvables et commandez-les imprimées en 3D.<br>Simple : demandez via GitHub, je vérifie et fabrique avec Creality K1C.</p>
+        <a href="https://github.com/VOTRE_USERNAME/VOTRE_REPO/issues/new?assignees=VOTRE_USERNAME&labels=demande&template=fabrication_piece.yaml&title=Demande%20fabrication%20%5BNom%20de%20la%20pi%C3%A8ce%5D" class="btn">🚀 Demander fabrication</a>
+        
+        <h2>Pièces disponibles</h2>
+        <table>
+            <thead>
+                <tr><th>Pièce</th><th>Statut</th><th>Prix</th><th>Lien</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vis M6 vintage (exemple)</td>
+                    <td><span class="status status-dispo">Disponible</span></td>
+                    <td>2€ / unité</td>
+                    <td><a href="#">Commander</a> | <a href="#">STL</a></td>
+                </tr>
+                <tr>
+                    <td>Poignée appareil photo ancien</td>
+                    <td><span class="status status-test">En test</span></td>
+                    <td>5€</td>
+                    <td><a href="#">Infos</a></td>
+                </tr>
+                <!-- Ajoutez vos vraies pièces ici -->
+            </tbody>
+        </table>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #999;">
+            Fabriqué en Occitanie, FR | <a href="https://github.com/VOTRE_USERNAME/VOTRE_REPO">Repo GitHub</a>
+        </p>
+    </div>
+</body>
+</html>
