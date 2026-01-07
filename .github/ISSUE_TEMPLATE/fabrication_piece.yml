@@ -1,47 +1,33 @@
 name: "🚀 Demande de fabrication pièce"
-description: "Demander la refabrication d'une pièce 3D discontinuée ou introuvable."
-title: "Demande fabrication [Nom de la pièce]"
+description: "Demande de refabrication d'une pièce 3D."
+title: "Demande fabrication: [Nom de la pièce]"
 labels:
   - demande
   - fabrication
-
 assignees:
-  - tonusername   # remplace par ton pseudo GitHub
+  - tonusername
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## Demande de fabrication de pièce 3D
-        Merci de remplir les informations ci-dessous le plus précisément possible.
-
-  - type: dropdown
-    id: priorite
-    attributes:
-      label: Priorité
-      description: Urgence de la demande
-      options:
-        - Basse (pas pressé)
-        - Moyenne
-        - Haute (urgent)
-    validations:
-      required: true
+        Merci de remplir ce formulaire pour demander la fabrication d'une pièce.
 
   - type: input
     id: nom_piece
     attributes:
-      label: Nom / référence du produit
-      description: Ex: "Poignée lave-linge X", "Pièce aspirateur Y", lien magasin, etc.
-      placeholder: "Ex: Poignée porte machine à laver Whirlpool WS60"
+      label: Nom / référence de la pièce
+      description: Exemples : "Poignée lave-linge X", "Pièce aspirateur Y", etc.
+      placeholder: "Nom ou référence de la pièce"
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Description détaillée de la pièce
-      description: Dimensions approximatives, fonction, type de fixation, contexte d'utilisation.
-      placeholder: "Plastique, ~50mm x 30mm, sert de support, se clipse sur..."
+      label: Description détaillée
+      description: Dimensions approximatives, rôle de la pièce, emplacement, etc.
+      placeholder: "Décrivez la pièce et son utilisation..."
     validations:
       required: true
 
@@ -49,20 +35,8 @@ body:
     id: photos
     attributes:
       label: Photos / liens
-      description: Ajoutez des photos (ou liens) de la pièce et des mesures si possible.
-      placeholder: "Glisser-déposer vos images ici ou collez des liens (Imgur, etc.)."
-    validations:
-      required: true
-
-  - type: dropdown
-    id: materiau
-    attributes:
-      label: Matériau préféré
-      options:
-        - PLA (standard, économique)
-        - PETG (plus résistant)
-        - ABS (plus technique)
-        - Sans préférence
+      description: Ajoutez des photos ou liens vers des images de la pièce.
+      placeholder: "Coller ici des liens ou joindre des images."
     validations:
       required: true
 
@@ -73,19 +47,3 @@ body:
       placeholder: "1"
     validations:
       required: true
-
-  - type: textarea
-    id: infos_sup
-    attributes:
-      label: Informations supplémentaires
-      description: Budget approximatif, délai souhaité, contraintes particulières, etc.
-      placeholder: "Ex: max 20€, besoin avant fin du mois, couleur noire..."
-
-  - type: checkboxes
-    id: conditions
-    attributes:
-      label: Conditions
-      description: Merci de confirmer.
-      options:
-        - label: J'accepte qu'un devis soit proposé avant la fabrication.
-          required: true
