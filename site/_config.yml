@@ -1,0 +1,15 @@
+title: ReFab3D
+description: Refabrication de pièces introuvables par impression 3D
+theme: minima
+
+markdown: kramdown
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+exclude:
+  - ../parts
