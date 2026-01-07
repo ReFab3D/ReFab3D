@@ -1,0 +1,20 @@
+- name: soumission
+  color: "0e8a16"
+
+- name: en-analyse
+  color: "fbca04"
+
+- name: valide
+  color: "006b75"
+
+- name: en-modelisation
+  color: "5319e7"
+
+- name: en-test
+  color: "c2e0c6"
+
+- name: commercialise
+  color: "1d76db"
+
+- name: refuse
+  color: "b60205"
