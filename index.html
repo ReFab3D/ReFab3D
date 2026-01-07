@@ -10,7 +10,7 @@
         .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 3rem; }
         h1 { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #1a1a1a; }
         p { text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #666; }
-        .btn { display: inline-block; background: #007bff; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; border: none; cursor: pointer; margin: 0 auto 3rem; display: block; max-width: 300px; }
+        .btn { display: block; background: #007bff; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s; border: none; cursor: pointer; margin: 0 auto 3rem; max-width: 300px; text-align: center; }
         .btn:hover { background: #0056b3; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,123,255,0.4); }
         table { width: 100%; border-collapse: collapse; margin-top: 3rem; }
         th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #eee; }
@@ -27,10 +27,11 @@
     <div class="container">
         <h1>🔧 Refab 3D - Pièces Discontinuées</h1>
         <p>Partagez des modèles de pièces introuvables et commandez-les imprimées en 3D.<br>Simple : demandez via GitHub, je vérifie et fabrique avec Creality K1C.</p>
-        <a href="<a href="https://github.com/ReFab3D/ReFab3D/issues/new?template=fabrication_piece.yml&title=Demande%20fabrication%20%5BNom%20de%20la%20pi%C3%A8ce%5D" class="btn">
-  🚀 Demander fabrication
-</a>
-" class="btn">🚀 Demander fabrication</a>
+
+        <!-- LIEN CORRIGÉ -->
+        <a href="https://github.com/ReFab3D/ReFab3D/issues/new?template=fabrication_piece.yml&title=Demande%20fabrication%20%5BNom%20de%20la%20pi%C3%A8ce%5D" class="btn">
+            🚀 Demander fabrication
+        </a>
         
         <h2>Pièces disponibles</h2>
         <table>
@@ -50,7 +51,6 @@
                     <td>5€</td>
                     <td><a href="#">Infos</a></td>
                 </tr>
-                <!-- Ajoutez vos vraies pièces ici -->
             </tbody>
         </table>
         <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #999;">
