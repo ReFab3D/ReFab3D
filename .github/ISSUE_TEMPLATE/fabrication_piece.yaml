@@ -1,0 +1,88 @@
+name: "🚀 Demande de fabrication pièce"
+description: "Demander la refabrication d'une pièce 3D discontinuée ou introuvable."
+labels: ["demande", "fabrication"]
+assignees: ["tonusername"]  # Remplace par ton GitHub username
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Demande de fabrication pièce 3D
+        Décrivez précisément la pièce pour que je puisse la recréer/modéliser/imprimer.
+
+  - type: dropdown
+    id: priorite
+    attributes:
+      label: Priorité
+      description: Urgence de la demande
+      options:
+        - "Basse (pas pressé)"
+        - "Moyenne"
+        - "Haute (urgent)"
+      default: 1
+    validations:
+      required: true
+
+  - type: text
+    id: nom_piece
+    attributes:
+      label: Nom / Référence produit
+      description: Ex: "Vis M6 appareil Kodak 1980" ou lien Amazon/eBay
+      placeholder: "ex: Poignée machine à laver Whirlpool WS60"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description détaillée
+      description: Dimensions approx, matériau original, usage...
+      placeholder: "Plastique noir, 5cm x 3cm, pour fixation..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: photos
+    attributes:
+      label: Photos / Liens (obligatoire)
+      description: Joignez images de la pièce (upload ou Imgur), mesures si possible
+      placeholder: "https://i.imgur.com/abc.jpg"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: materiau
+    attributes:
+      label: Matériau préféré
+      options:
+        - "PLA (standard, pas cher)"
+        - "PETG (résistant)"
+        - "ABS (robuste)"
+        - "Autre (précisez)"
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: quantite
+    attributes:
+      label: Quantité souhaitée
+      type: number
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: infos_sup
+    attributes:
+      label: Infos supplémentaires
+      placeholder: "Budget max, délai, adresse livraison..."
+
+  - type: checkboxes
+    id: conditions
+    attributes:
+      label: Conditions
+      description: En cochant, vous acceptez...
+      options:
+        - label: "J'accepte les conditions (paiement après test impression)"
+          required: true
